@@ -728,5 +728,8 @@ def main():
         </div>
         """, unsafe_allow_html=True)
 
-    if __name__ == '__main__':
-        main()
+if __name__ == "__main__":
+    # Khởi tạo session state nếu chưa có
+    if 'results_ready' not in st.session_state:
+        st.session_state.results_ready = False
+    main()  # Gọi hàm chính
